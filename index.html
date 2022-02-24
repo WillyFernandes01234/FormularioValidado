@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulários em Java Script</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #cabecalho{
+            background-color: hsl(180, 2%, 40%);
+            height: 100px;
+            width: 100%;
+            display: flex;
+            margin-bottom: -20px;
+        }
+
+        #title{
+            padding: 20px;
+            font-size: 50px;
+        }
+
+        img{
+            height: 80px;
+            width: 150px;
+            padding: 10px;
+        }
+
+        .esconder{
+            display: none;
+            font-size: xx-large;
+            text-align: center;
+            padding: 20px;
+            font-size: 40px;
+        }
+
+        body{
+            background-color: white;
+        } 
+        
+        form{
+            background-color: lightblue;
+            color: white;
+            font-size: 20px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 5px;
+        }
+
+        legend{
+            font-weight: bolder;
+            font-size: xx-large;
+            padding-left: 20px;
+        }
+
+        fieldset{
+            margin: 20px;
+        }
+
+        input{
+            margin: 10px;
+        }
+
+        button{
+            color: azure;
+            height: 50px;
+            width: 200px;
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            
+            color: black;
+            font-size: 20px;
+        }
+
+        hr{
+            margin-top: 0px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #resumo{
+            background-color: black;
+            color: white;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .re{
+            font-size: 26px;
+            padding-left: 10px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+          <legend>Acesso:</legend>
+          <input type="text" id="texto" />    
+      <!-- </fieldset>
+      <fieldset> -->
+          <legend>Telefone: </legend>
+          <input type="tel" id="fone" />
+<!--       </fieldset>
+      <fieldset> -->
+          <legend>E-mail:</legend>
+          <input type="email" id="email" />
+      <!-- </fieldset>
+      <fieldset> -->
+          <legend>Senha:</legend>
+          <input type="password" id="senha" />
+      </fieldset>
+      <fieldset>
+        <legend>Curso Na Sua Escola: </legend>
+        <label for="info"> Informática </label>
+        <input type="checkbox" id="info" /> <br />
+        <label for="adm"> Administração </label>
+        <input type="checkbox" id="adm" /> <br />
+        <label for="enf"> Enfermagem </label>
+        <input type="checkbox" id="enf" />
+      </fieldset>
+      <fieldset>
+        <legend>Seu Curso Técnico: </legend>
+        <label for="info2"> Informática </label>
+        <input type="radio" name="seucurso" id="info2" /> <br />
+        <label for="adm2"> Administração </label>
+        <input type="radio" name="seucurso" id="adm2" /> <br />
+        <label for="enf2"> Enfermagem </label>
+        <input type="radio" name="seucurso" id="enf2" />
+      </fieldset>
+      <fieldset>
+        <legend>Campo Oculto: </legend>
+        <input type="hidden" name="oculto" id="oculto" value="9" />
+      </fieldset>
+      <fieldset>
+        <legend>Idade: </legend>
+        <input type="number" name="num" id="num" />
+      </fieldset>
+      <fieldset>
+        <legend>Data: </legend>
+        <input type="date" name="data" id="data" />
+      </fieldset>
+      <fieldset>
+        <legend>Hora:</legend>
+        <input type="time" name="hora" id="hora" />
+      </fieldset>
+      <fieldset>
+        <legend>Satisfação: </legend>
+        <input type="range" id="range" min="10" max="100" />
+      </fieldset>
+      <fieldset>
+        <legend>Cor Favorita: </legend>
+        <label for="PriFaixa"> 1° faixa: </label>
+        <select name="cars" id="PriFaixa">
+          <option value="Preto">Preto</option>
+          <option value="Marrom">Marrom</option>
+          <option value="Vermelho">Vermelho</option>
+          <option value="Azul">Azul</option>
+          <option value="Amarelo">Amarelo</option>
+          <option value="Verde">Verde</option>
+          <option value="Branco">Branco</option>
+          <option value="Roxo">Roxo</option>
+        </select>
+      </fieldset>
+      <p><button type="reset">Limpar</button></p>
+      <p><button type="button" onclick="pegarDados()">Validar</button></p>
+      <p><button type="submit">Submeter</button></p>
+      <fieldset class="esconder">
+        <legend>Resumo</legend>
+        <div id="camText"></div>
+        <div id="camFone"></div>
+        <div id="camEmail"></div>
+        <div id="camSenha"></div>
+        <div id="camCheckInfo"></div>
+        <div id="camCheckAdm"></div>
+        <div id="camCheckEnf"></div>
+        <div id="camCheckCur"></div>
+        <div id="camOcult"></div>
+        <div id="camNum"></div>
+        <div id="camData"></div>
+        <div id="camHora"></div>
+        <div id="camRange"></div>
+        <div id="camSel"></div>
+      </fieldset>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html
+
